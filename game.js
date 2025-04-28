@@ -1,4 +1,4 @@
-// Game setup
+a// Game setup
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 const healthBar = document.getElementById('healthBar');
@@ -260,6 +260,33 @@ function drawHeart(x, y, size, color) {
     ctx.closePath();
     ctx.restore();
 }
+// [Previous code remains the same until the Key States section]
 
+// Key states - Changed to WASD
+const keys = {
+    w: false,
+    a: false,
+    s: false,
+    d: false
+};
+
+// Event listeners
+window.addEventListener('keydown', keyDown);
+window.addEventListener('keyup', keyUp);
+canvas.addEventListener('click', shoot);
+
+function keyDown(e) {
+    if (['w', 'a', 's', 'd'].includes(e.key.toLowerCase())) {
+        keys[e.key.toLowerCase()] = true;
+    }
+}
+
+function keyUp(e) {
+    if (['w', 'a', 's', 'd'].includes(e.key.toLowerCase())) {
+        keys[e.key.toLowerCase()] = false;
+    }
+}
+
+// [Rest of the previous code remains the same]
 // Start game
 update();
