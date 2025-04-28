@@ -6,51 +6,47 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #222;
-    font-family: Arial, sans-serif;
+    font-family: 'Press Start 2P', cursive;
     overflow: hidden;
-}
-
-#gameContainer {
-    position: relative;
-}
-
-#gameCanvas {
-    border: 4px solid #ff6b9d;
-    box-shadow: 0 0 20px #ff6b9d;
-}
-
-#healthBarContainer {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 200px;
-    height: 20px;
-    background-color: #444;
-    border: 2px solid #fff;
-}
-
-#healthBar {
-    height: 100%;
-    width: 100%;
-    background-color: #4CAF50;
-    transition: width 0.3s;
-}
-
-#scoreDisplay {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     color: white;
-    font-size: 20px;
 }
 
-#message {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
+/* Pixel font import */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+#titleScreen {
     text-align: center;
-    color: white;
-    font-size: 18px;
-    text-shadow: 0 0 5px #ff6b9d;
+    animation: pulse 2s infinite;
 }
+
+#titleScreen h1 {
+    font-size: 48px;
+    color: #ff6b9d;
+    text-shadow: 5px 5px 0 #000, 
+                -1px -1px 0 #000,  
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000;
+    margin-bottom: 50px;
+}
+
+#startButton {
+    font-size: 24px;
+    color: #ffcc00;
+    text-shadow: 3px 3px 0 #000;
+    cursor: pointer;
+    margin: 40px 0;
+    padding: 15px 30px;
+    border: 4px solid #ffcc00;
+    display: inline-block;
+    background-color: rgba(0,0,0,0.5);
+    transition: all 0.3s;
+}
+
+#startButton:hover {
+    background-color: rgba(255,204,0,0.2);
+    transform: scale(1.1);
+}
+
+#controls {
+   
